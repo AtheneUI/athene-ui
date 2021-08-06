@@ -1,4 +1,4 @@
-![](https://github.com/AtheneUI/athene-ui/blob/master/dumi/public/images/favicon.png?raw=true) 
+<div style="text-align: center;"><img src="https://github.com/AtheneUI/athene-ui/blob/master/dumi/public/images/favicon.png?raw=true"/></div>
 
 <div style="text-align: center;"><h1>athene-ui</h1></div>
 
@@ -101,4 +101,3 @@ import 'athene-ui/dist/athene.min.css';
   - 项目全部覆盖 `TypeScript` 可以丝滑的体验类型编程，且已经通过 babel 处理好 ESNext 和 React 语法。
   - 项目打包产出三个包 `dist`、`lib`、`es` 分别对应三个场景 `Umd`、`CommonJs`、`ESModule`
   - 非常乐于接受诸位宝贵建议，如有建议请提 `issue` 。
-
