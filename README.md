@@ -1,8 +1,10 @@
-![](/Users/admin_lj/open-source3/athene-ui/dumi/public/images/favicon.png)
+![](https://github.com/AtheneUI/athene-ui/blob/master/dumi/public/images/favicon.png?raw=true) 
 
 <div style="text-align: center;"><h1>athene-ui</h1></div>
 
 <div style="text-align: center;">🧝‍♀️ A react mobile UI component library poured with wisdom!</div>
+
+
 
 ![](https://img.shields.io/badge/test-passing-brightgreen) ![](https://img.shields.io/badge/coverage-100%25-green) ![](https://img.shields.io/badge/npm-v4.16.10-blue)  ![](https://img.shields.io/badge/downloads-3.2M%2Fmonth-green) ![](https://img.shields.io/badge/dependencies-up%20to%20date-yellow) ![](https://img.shields.io/badge/dev%20dependencies-up%20to%20date-brightgreen) ![](https://img.shields.io/badge/alerts%3A%20js%2Fts-0-brightgreen) ![](https://img.shields.io/badge/license-passing-brightgreen) ![](https://img.shields.io/badge/discussions-on%20github-blue) ![](https://img.shields.io/badge/help%20wanted-143-brightgreen) 
 
