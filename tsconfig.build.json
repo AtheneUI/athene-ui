@@ -1,0 +1,14 @@
+{
+    "extends": "./tsconfig.json",
+    "include": [
+        "components",
+        "typings/typings.d.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "components/**/__test__/*.ts",
+        "components/**/__test__/*.tsx",
+        "components/**/*.test.ts",
+        "components/**/*.test.tsx",
+    ]
+}

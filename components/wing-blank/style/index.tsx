@@ -1,0 +1,1 @@
+import './wing-blank.less';

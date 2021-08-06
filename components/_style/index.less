@@ -1,0 +1,18 @@
+@layout-flex: flex;
+
+.overflow-ellipsis {
+    white-space: nowrap;
+    word-break: break-word;
+    text-overflow: ellipsis;
+}
+
+.flex-center {
+    display: @layout-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.athene-button-base-style {
+    .overflow-ellipsis;
+    .flex-center;
+}
