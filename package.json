@@ -1,6 +1,10 @@
 {
   "name": "athene-ui",
   "version": "1.0.0",
+  "main": "./lib/index.js",
+  "author": "FruitJ <1848661762@qq.com>",
+  "license": "MIT",
+  "repository": "https://github.com/AtheneUI/athene-ui.git",
   "scripts": {
     "compile:esm": "cross-env BABEL_ENV=esm gulp compile-tsx-esm && tsc -p ./tsconfig.build.json --outDir es",
     "compile:cjs": "cross-env BABEL_ENV=cjs gulp compile-tsx-cjs && tsc -p ./tsconfig.build.json --outDir lib",
