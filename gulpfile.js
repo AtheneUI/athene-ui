@@ -26,6 +26,10 @@ const lessDir = [
     "components/**/*.less",
 ];
 
+const cssDir = [
+    "components/**/*.css",
+];
+
 // 需要处理的 css in js 的目录
 const cssInJsDir = [
     "components/**/_style/*.tsx",
@@ -61,7 +65,7 @@ const copy2LibAndEs = (src) => {
             .pipe(gulp.dest('es'))
             .on('end', () => {
                 log.success(`successful: 已成功将文件拷贝到 lib、es 目录`)
-            });;
+            });
     };
 };
 // 将 less 拷贝到 lib 和 es 对应目录下
@@ -77,7 +81,7 @@ const compileLess2css = (src) => {
             .pipe(gulp.dest('es'))
             .on('end', () => {
                 log.success(`successful: less 成功编译为 css 并输出到 lib、es 目录`)
-            });;
+            });
     };
 };
 // 将 less 编译为 css 并输出
@@ -96,7 +100,7 @@ const cssInJS = (src, target) => {
             .pipe(gulp.dest(target))
             .on('end', () => {
                 log.success(`successful: css.js 生成完毕并输出到 ${ target } 目录`)
-            });;
+            });
     }
 };
 // 生成 cjs 模式的 css in js 文件
@@ -105,7 +109,7 @@ gulp.task('generator-cssInJs-cjs', cssInJS(cssInJsDir, 'lib'));
 gulp.task('generator-cssInJs-esm', cssInJS(cssInJsDir, 'es'));
 
 gulp.task('generator-athene-css', () => {
-    return gulp.src(lessDir)
+    return gulp.src([...lessDir, ...cssDir])
         .pipe(compileLess())
         .pipe(autoprefixer())
         .pipe(postcss())
@@ -113,7 +117,7 @@ gulp.task('generator-athene-css', () => {
         .pipe(gulp.dest('dist'))
         .on('end', () => {
             log.success(`successful: athene.css 生成完毕，并输出到 dist 目录`)
-        });;
+        });
 });
 
 const lessSuffix2Css = (src, target) => {
@@ -126,7 +130,7 @@ const lessSuffix2Css = (src, target) => {
             .pipe(gulp.dest(target))
             .on('end', () => {
                 log.success(`successful: 成功将文件内部引用中的 less 替换成了 css，并输出到 ${ target } 目录`)
-            });;
+            });
     }
 };
 // 将 lib 下的 components.less 生成对应的 css
@@ -141,8 +145,8 @@ gulp.task('clean-athene-css', () => {
         .pipe(gulp.dest('dist'))
         .on('end', () => {
             log.success(`successful: 成功将 athene.css 压缩并输出到 dist 目录`)
-        });;
-})
+        });
+});
 
 gulp.task('distDir-generator-css-sourceMap', () => {
     return gulp.src('dist/athene*.css')
@@ -153,5 +157,8 @@ gulp.task('distDir-generator-css-sourceMap', () => {
         .pipe(gulp.dest('dist'))
         .on('end', () => {
             log.success(`successful: 成功生成 css 的 sourceMap 并输出到 dist 目录`)
-        });;
-})
+        });
+});
+
+// 将 components 目录下的 css 复制到 lib、es 对应的目录下
+gulp.task('copy-css', copy2LibAndEs(cssDir));
