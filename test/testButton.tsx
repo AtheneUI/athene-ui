@@ -18,14 +18,14 @@ import '../components/white-space/style';
 
 import WingBlank, { WingBlankTypeEnum } from '../components/wing-blank';
 import WhiteSpace from '../components/white-space';
-import Button, { ButtonTypeEnum, ButtonStyleEnum } from '../components/button';
+import Button, { ButtonTypeEnum, ButtonStyleEnum, ButtonSizeEnum } from '../components/button';
 
 const TestButton: React.FC = () => {
 	return (
 		<React.Fragment>
 			<WhiteSpace />
 			<WingBlank>
-				<Button>default 按钮</Button>
+				<Button size={ButtonSizeEnum.MINI}>default 按钮</Button>
 			</WingBlank>
 			<WhiteSpace />
 			<WingBlank type={WingBlankTypeEnum.MIDDLE}>
@@ -35,6 +35,8 @@ const TestButton: React.FC = () => {
 						color: '#FFF',
 						opacity: 0.5,
 					}}
+					disabled={true}
+					size={ButtonSizeEnum.SMALL}
 				>
 					primary 按钮
 				</Button>
@@ -47,6 +49,7 @@ const TestButton: React.FC = () => {
 						color: '#FFF',
 						opacity: 0.5,
 					}}
+					size={ButtonSizeEnum.NORMAL}
 				>
 					danger 按钮
 				</Button>
@@ -59,6 +62,7 @@ const TestButton: React.FC = () => {
 						color: '#FFF',
 						opacity: 0.5,
 					}}
+					size={ButtonSizeEnum.LARGE}
 				>
 					warning 按钮
 				</Button>
@@ -84,6 +88,7 @@ const TestButton: React.FC = () => {
 						color: '#1976d2',
 						opacity: 0.5,
 					}}
+					disabled={true}
 				>
 					text 按钮
 				</Button>
@@ -147,6 +152,7 @@ const TestButton: React.FC = () => {
 						color: '#1976d2',
 						opacity: 0.5,
 					}}
+					disabled={true}
 				>
 					ghost 按钮
 				</Button>
