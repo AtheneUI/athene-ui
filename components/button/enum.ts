@@ -12,8 +12,9 @@ export enum ButtonStyleEnum {
 }
 export enum ButtonSizeEnum {
 	LARGE = 'large',
-	MIDDLE = 'middle',
 	SMALL = 'small',
+	NORMAL = 'normal',
+	MINI = 'mini',
 }
 export enum ButtonIconPositionEnum {
 	RIGHT = 'right',
@@ -27,4 +28,10 @@ export enum ButtonShapeEnum {
 	RECTANGLE = 'rectangle',
 	ROUND = 'round',
 	CIRCLE = 'circle',
+}
+
+export enum ButtonJumpEnum {
+	REPLACE = 'replace',
+	HREF = 'href',
+	TO = 'to',
 }
