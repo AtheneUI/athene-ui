@@ -1,3 +1,4 @@
 import transferRpxToVw from './transferRpxToVw';
+import addWaterRipple from './ripple';
 
-export { transferRpxToVw };
+export { addWaterRipple, transferRpxToVw };
