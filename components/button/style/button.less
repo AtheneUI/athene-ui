@@ -2,68 +2,91 @@
 
 @primary-color: #26a2ff;
 
-.buttonAfter {
-    background-color: #000;
-    content: " ";
-    opacity: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-}
-.athene-button-primary {
-    position: relative;
-    border: 2px solid #D9D9D9;
-    border-color: @primary-color;
-    color: #FFF;
-    background-color: @primary-color;
-    
-    &::after {
-        &:extend(.buttonAfter);
+.button-elevation {
+    box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+    &:active {
+        box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%);
     }
+}
 
-    &:active::after {
-        opacity: .4;
+.setColorAndBgColor(@color, @bgColor) {
+    color: @color;
+    background: @bgColor;
+}
+
+.athene-button-type-buttonStyle(@color, @bgColor) {
+    box-shadow: none;
+    .setColorAndBgColor(@color, @bgColor);
+    &:active {
+        box-shadow: none;
     }
 }
 
 .athene-button-default {
-    // border: 2px solid #D9D9D9;
-    position: relative;
-    box-shadow: 0 0 1px #b8bbbf;
-    border: 0;
-    color: #656B79;
-    background-color: #FFF;
-
-    &::after {
-        &:extend(.buttonAfter);
-    }
-    
-    &:active::after {
-        opacity: .2;
-    }
+    background: #E0E0E0;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
+
+.athene-button-primary {
+    .setColorAndBgColor(#FFF, #1976d2);
+}
+
+.athene-button-warning {
+    .setColorAndBgColor(#FFF, #ffc800);
+}
+
 .athene-button-danger {
-    position: relative;
-    border: 2px solid #D9D9D9;
-    border-color: #EF4F4F;
-    color: #FFF;
-    background-color: #EF4F4F;
-
-    &::after {
-        &:extend(.buttonAfter);
-    }
-
-    &:active::after {
-        opacity: .4;
-    }
+    .setColorAndBgColor(#FFF, #dc014e);
 }
 
-.athene-button-ghost {
-    position: relative;
-    border: 2px solid #D9D9D9;
-    border-color: #EF4F4F;
-    color: #FFF;
-    background-color: #EF4F4F;
+.athene-button-default-text {
+    .athene-button-type-buttonStyle(#000000de, transparent);
+}
+
+.athene-button-primary-text {
+    .athene-button-type-buttonStyle(#1976d2, transparent);
+}
+
+.athene-button-warning-text {
+    .athene-button-type-buttonStyle(#ffc800, transparent);
+}
+
+.athene-button-danger-text {
+    .athene-button-type-buttonStyle(#dc014e, transparent);
+}
+
+.athene-button-default-link {
+    .athene-button-type-buttonStyle(#1976d2, transparent);
+}
+
+.athene-button-primary-link {
+    .athene-button-type-buttonStyle(#1976d2, transparent);
+}
+
+.athene-button-warning-link {
+    .athene-button-type-buttonStyle(#1976d2, transparent);
+}
+
+.athene-button-danger-link {
+    .athene-button-type-buttonStyle(#1976d2, transparent);
+}
+
+.athene-button-default-ghost {
+    border: 1px solid #0000003b;
+    .athene-button-type-buttonStyle(#000000de, transparent);
+}
+
+.athene-button-primary-ghost {
+    border: 1px solid #1976d280;
+    .athene-button-type-buttonStyle(#1976d2, transparent);
+}
+
+.athene-button-warning-ghost {
+    border: 1px solid #ffc80080;
+    .athene-button-type-buttonStyle(#ffc800, transparent);
+}
+
+.athene-button-danger-ghost {
+    border: 1px solid #dc004e80;
+    .athene-button-type-buttonStyle(#dc004e, transparent);
 }
