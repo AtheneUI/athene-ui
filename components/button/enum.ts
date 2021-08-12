@@ -3,9 +3,9 @@ export enum ButtonTypeEnum {
 	PRIMARY = 'primary',
 	DEFAULT = 'default',
 	DANGER = 'danger',
+	WARNING = 'warning',
 }
 export enum ButtonStyleEnum {
-	DASHED = 'dashed',
 	GHOST = 'ghost',
 	LINK = 'link',
 	TEXT = 'text',
