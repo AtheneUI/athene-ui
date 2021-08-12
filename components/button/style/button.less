@@ -14,9 +14,8 @@
     background: @bgColor;
 }
 
-.athene-button-type-buttonStyle(@color, @bgColor) {
+.athene-button-type-buttonStyle {
     box-shadow: none;
-    .setColorAndBgColor(@color, @bgColor);
     &:active {
         box-shadow: none;
     }
@@ -39,54 +38,3 @@
     .setColorAndBgColor(#FFF, #dc014e);
 }
 
-.athene-button-default-text {
-    .athene-button-type-buttonStyle(#000000de, transparent);
-}
-
-.athene-button-primary-text {
-    .athene-button-type-buttonStyle(#1976d2, transparent);
-}
-
-.athene-button-warning-text {
-    .athene-button-type-buttonStyle(#ffc800, transparent);
-}
-
-.athene-button-danger-text {
-    .athene-button-type-buttonStyle(#dc014e, transparent);
-}
-
-.athene-button-default-link {
-    .athene-button-type-buttonStyle(#1976d2, transparent);
-}
-
-.athene-button-primary-link {
-    .athene-button-type-buttonStyle(#1976d2, transparent);
-}
-
-.athene-button-warning-link {
-    .athene-button-type-buttonStyle(#1976d2, transparent);
-}
-
-.athene-button-danger-link {
-    .athene-button-type-buttonStyle(#1976d2, transparent);
-}
-
-.athene-button-default-ghost {
-    border: 1px solid #0000003b;
-    .athene-button-type-buttonStyle(#000000de, transparent);
-}
-
-.athene-button-primary-ghost {
-    border: 1px solid #1976d280;
-    .athene-button-type-buttonStyle(#1976d2, transparent);
-}
-
-.athene-button-warning-ghost {
-    border: 1px solid #ffc80080;
-    .athene-button-type-buttonStyle(#ffc800, transparent);
-}
-
-.athene-button-danger-ghost {
-    border: 1px solid #dc004e80;
-    .athene-button-type-buttonStyle(#dc004e, transparent);
-}
